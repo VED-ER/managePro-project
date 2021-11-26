@@ -24,7 +24,7 @@ Live Site URL: [managePro](https://managepro-project.web.app/)
 - Realtime data updates 
 
 ## Screenshot
-![React App 11-22-2021 5-32-39 PM](https://user-images.githubusercontent.com/92994473/142899250-5d162da1-e722-4541-a142-b15f878a50ac.png)
+![React App 11-26-2021 3-59-32 PM](https://user-images.githubusercontent.com/92994473/143599475-b5a265fe-2e37-4e51-9ae9-7998339ceeb7.png)
 
 
 
