@@ -10,6 +10,10 @@ import Navbar from "./components/Navbar"
 import Sidebar from "./components/Sidebar"
 import { useAuthContext } from "./hooks/useAuthContext"
 import OnlineUsers from "./components/OnlineUsers"
+import Tasks from "./pages/tasks/Tasks"
+import Task from "./pages/tasks/Task"
+import Projects from "./pages/projects/Projects"
+import Customers from "./pages/customers/Customers"
 
 function App() {
 	const { user, authIsReady } = useAuthContext()
@@ -25,9 +29,21 @@ function App() {
 								{!user && <Redirect to="/login" />}
 								{user && <Dashboard />}
 							</Route>
+							<Route exact path="/projects">
+								{!user && <Redirect to="/login" />}
+								{user && <Projects />}
+							</Route>
 							<Route path="/create">
 								{!user && <Redirect to="/login" />}
 								{user && <Create />}
+							</Route>
+							<Route path="/tasks">
+								{!user && <Redirect to="/login" />}
+								{user && <Tasks />}
+							</Route>
+							<Route path="/task/:id">
+								{!user && <Redirect to="/login" />}
+								{user && <Task />}
 							</Route>
 							<Route path="/projects/:id">
 								{!user && <Redirect to="/login" />}
@@ -40,6 +56,10 @@ function App() {
 							<Route path="/signup">
 								{!user && <Signup />}
 								{user && <Redirect to="/" />}
+							</Route>
+							<Route path="/customers">
+								{!user && <Redirect to="/login" />}
+								{user && <Customers />}
 							</Route>
 						</Switch>
 					</div>

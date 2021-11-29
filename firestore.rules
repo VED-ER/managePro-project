@@ -9,5 +9,13 @@ service cloud.firestore {
             allow read, create, update: if request.auth != null;
             allow delete: if request.auth.uid == resource.data.createdBy.id;
     }
+    match /tasks/{document=**} {
+      allow create: if request.auth != null;
+      allow read,update,delete: if request.auth.uid == resource.data.userId;
+    }
+    match /customers/{document_id} {
+    	allow read,create : if request.auth != null;
+      allow delete: if request.auth.uid == resource.data.createdById
+    }
   }
 }
