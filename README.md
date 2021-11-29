@@ -1,6 +1,9 @@
-# managePro - Project Management App v1
+# managePro - Project Management App v2
 
 Project management site with lots of features.
+
+Update v2:
+-added fully functional tasks,customers,projects sections with new dashboard
 
 Live Site URL: [managePro](https://managepro-project.web.app/)
 
